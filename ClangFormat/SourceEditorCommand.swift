@@ -11,10 +11,10 @@ import XcodeKit
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     var commandPath: String {
-        return Bundle.main().pathForResource("clang-format", ofType: nil)!
+        return Bundle.main.path(forResource: "clang-format", ofType: nil)!
     }
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (NSError?) -> Void ) -> Void {
+      func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
         let errorPipe = Pipe()
         let outputPipe = Pipe()
 
