@@ -14,11 +14,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         return Bundle.main.path(forResource: "clang-format", ofType: nil)!
     }
     
-      func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+      func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         let errorPipe = Pipe()
         let outputPipe = Pipe()
 
-        let task = Task()
+        let task = Process()
         task.standardError = errorPipe
         task.standardOutput = outputPipe
         task.launchPath = commandPath
