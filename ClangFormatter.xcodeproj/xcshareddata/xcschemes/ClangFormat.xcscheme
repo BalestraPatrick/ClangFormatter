@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0810"
    wasCreatedForAppExtension = "YES"
    version = "1.3">
    <BuildAction
@@ -80,12 +80,6 @@
             ReferencedContainer = "container:ClangFormatter.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "/Users/boris/Projects/contentful-management.objc/Pod/Code/CMAEntry.m"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

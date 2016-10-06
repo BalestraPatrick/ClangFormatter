@@ -14,7 +14,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         return Bundle.main.path(forResource: "clang-format", ofType: nil)!
     }
 
-    static func run(commandPath: String, arguments: [String], stdin: String) -> String? {
+    static func run(_ commandPath: String, arguments: [String], stdin: String) -> String? {
         let errorPipe = Pipe()
         let outputPipe = Pipe()
 
@@ -43,10 +43,10 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     }
 
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
-        if let outputString = SourceEditorCommand.run(commandPath: commandPath,
+        if let outputString = SourceEditorCommand.run(commandPath,
                                                       arguments: [ "-style=llvm" ],
-                                                      stdin: invocation.buffer.completeBuffer) ,
-                    invocation.buffer.contentUTI == "public.objective-c-source" {
+                                                      stdin: invocation.buffer.completeBuffer),
+            invocation.buffer.contentUTI == "public.objective-c-source" {
             invocation.buffer.lines.removeAllObjects()
 
             let lines = outputString.characters.split(separator: "\n").map { String($0) }
