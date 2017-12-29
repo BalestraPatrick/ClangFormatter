@@ -49,7 +49,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             invocation.buffer.contentUTI == "public.objective-c-source" {
             invocation.buffer.lines.removeAllObjects()
 
-            let lines = outputString.characters.split(separator: "\n").map { String($0) }
+            let lines = outputString.split(separator: "\n").map { String($0) }
             invocation.buffer.lines.addObjects(from: lines)
 
             // Crashes Xcode when replacing `completeBuffer`
