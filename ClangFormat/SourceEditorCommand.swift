@@ -18,6 +18,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
     static func run(_ commandPath: String, arguments: [String], stdin: String) -> String? {
         
+        print("Path : \(Bundle.main.bundlePath)")
+        
         let errorPipe = Pipe()
         let outputPipe = Pipe()
  
