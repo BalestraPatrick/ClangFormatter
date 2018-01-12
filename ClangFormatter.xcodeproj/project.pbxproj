@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490F268120078A4600F260F4 /* _clang-format-objc in Resources */ = {isa = PBXBuildFile; fileRef = 490F268020078A4600F260F4 /* _clang-format-objc */; };
+		4998DEEA200893F8003D8C7A /* ClangFormatAssume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4998DEE9200893F8003D8C7A /* ClangFormatAssume.swift */; };
 		49A486272004C24400B4758A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486262004C24400B4758A /* Files.swift */; };
 		A11B69171D19F37D00802D08 /* clang-format in Resources */ = {isa = PBXBuildFile; fileRef = A1417CD41D19ED17005DEFA3 /* clang-format */; };
 		A1417CB01D19E832005DEFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417CAF1D19E832005DEFA3 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		490F268020078A4600F260F4 /* _clang-format-objc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_clang-format-objc"; sourceTree = "<group>"; };
+		4998DEE9200893F8003D8C7A /* ClangFormatAssume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClangFormatAssume.swift; sourceTree = "<group>"; };
 		49A486262004C24400B4758A /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		A1417CAC1D19E832005DEFA3 /* ClangFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClangFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417CAF1D19E832005DEFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				49A486262004C24400B4758A /* Files.swift */,
 				A1417CC81D19EB7D005DEFA3 /* SourceEditorExtension.swift */,
 				A1417CCA1D19EB7D005DEFA3 /* SourceEditorCommand.swift */,
+				4998DEE9200893F8003D8C7A /* ClangFormatAssume.swift */,
 				A1417CC61D19EB7D005DEFA3 /* Supporting Files */,
 			);
 			path = ClangFormat;
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1417CC91D19EB7D005DEFA3 /* SourceEditorExtension.swift in Sources */,
+				4998DEEA200893F8003D8C7A /* ClangFormatAssume.swift in Sources */,
 				A1417CCB1D19EB7D005DEFA3 /* SourceEditorCommand.swift in Sources */,
 				49A486272004C24400B4758A /* Files.swift in Sources */,
 			);
@@ -426,7 +430,7 @@
 				DEVELOPMENT_TEAM = 29C5EDQ3MS;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.vu0.ClangFormatter;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -444,7 +448,7 @@
 				DEVELOPMENT_TEAM = 29C5EDQ3MS;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.vu0.ClangFormatter;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -463,7 +467,7 @@
 				INFOPLIST_FILE = ClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = org.vu0.ClangFormatter.ClangFormat;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter.ClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -483,7 +487,7 @@
 				INFOPLIST_FILE = ClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = org.vu0.ClangFormatter.ClangFormat;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter.ClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
