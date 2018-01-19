@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4909568220118CA600A2FB3D /* FormatConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909568120118CA600A2FB3D /* FormatConfig.swift */; };
 		490F268120078A4600F260F4 /* _clang-format-objc in Resources */ = {isa = PBXBuildFile; fileRef = 490F268020078A4600F260F4 /* _clang-format-objc */; };
+		4971349320120C3100D3CD91 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4971349220120C3100D3CD91 /* String+MD5.swift */; };
 		49A486272004C24400B4758A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A486262004C24400B4758A /* Files.swift */; };
 		A11B69171D19F37D00802D08 /* clang-format in Resources */ = {isa = PBXBuildFile; fileRef = A1417CD41D19ED17005DEFA3 /* clang-format */; };
 		A1417CB01D19E832005DEFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1417CAF1D19E832005DEFA3 /* AppDelegate.swift */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		4909568120118CA600A2FB3D /* FormatConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatConfig.swift; sourceTree = "<group>"; };
 		490F268020078A4600F260F4 /* _clang-format-objc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "_clang-format-objc"; sourceTree = "<group>"; };
+		4971349220120C3100D3CD91 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		4971349420120D7200D3CD91 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
 		49A486262004C24400B4758A /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		A1417CAC1D19E832005DEFA3 /* ClangFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClangFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1417CAF1D19E832005DEFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		A1417CC21D19EB7D005DEFA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4971349420120D7200D3CD91 /* libcommonCrypto.tbd */,
 				A1417CC31D19EB7D005DEFA3 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -143,6 +147,7 @@
 				A1417CC81D19EB7D005DEFA3 /* SourceEditorExtension.swift */,
 				A1417CCA1D19EB7D005DEFA3 /* SourceEditorCommand.swift */,
 				4909568120118CA600A2FB3D /* FormatConfig.swift */,
+				4971349220120C3100D3CD91 /* String+MD5.swift */,
 				A1417CC61D19EB7D005DEFA3 /* Supporting Files */,
 			);
 			path = ClangFormat;
@@ -301,6 +306,7 @@
 			files = (
 				4909568220118CA600A2FB3D /* FormatConfig.swift in Sources */,
 				A1417CC91D19EB7D005DEFA3 /* SourceEditorExtension.swift in Sources */,
+				4971349320120C3100D3CD91 /* String+MD5.swift in Sources */,
 				A1417CCB1D19EB7D005DEFA3 /* SourceEditorCommand.swift in Sources */,
 				49A486272004C24400B4758A /* Files.swift in Sources */,
 			);
@@ -466,6 +472,10 @@
 				DEVELOPMENT_TEAM = 29C5EDQ3MS;
 				INFOPLIST_FILE = ClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter.ClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +496,10 @@
 				DEVELOPMENT_TEAM = 29C5EDQ3MS;
 				INFOPLIST_FILE = ClangFormat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter.ClangFormat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
