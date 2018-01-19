@@ -10,7 +10,9 @@ import Foundation
 import XcodeKit
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
+    
     let pl_file = FileSystem()
+    let pl_config = FormatConfig()
     
     var commandPath: String {
         return Bundle.main.path(forResource: "clang-format", ofType: nil)!
@@ -49,11 +51,10 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         if let outputString = SourceEditorCommand.run(commandPath,
-                                                      arguments: [ "-style=file", "-assume-filename=Objective-C" ],
+                                                      arguments: [ "-style=file", "-assume-filename=\(pl_config.language)" ],
                                                       stdin: invocation.buffer.completeBuffer),
             invocation.buffer.contentUTI == "public.objective-c-source" {
             
-            // Maybe trigger Xcode Crash.
             invocation.buffer.completeBuffer = outputString
         }
 
