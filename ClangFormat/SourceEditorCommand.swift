@@ -16,6 +16,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
     let plConfig = FormatConfig()
 
+
     var commandPath: String {
         return Bundle.main.path(forResource: "clang-format", ofType: nil)!
     }
@@ -58,6 +59,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                                                       arguments: ["-style=file", "-assume-filename=\(plConfig.language)"],
                                                       stdin: invocation.buffer.completeBuffer),
             invocation.buffer.contentUTI == "public.objective-c-source" {
+
             invocation.buffer.completeBuffer = outputString
         }
 
@@ -68,13 +70,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     static func updateConfigIfNeeded (currentDirectory: String) -> Bool {
 
         let formatConfig = FormatConfig()
-
         let fileManager = FileManager()
+
         let plOriginFormatFile = Bundle.main.path(forResource: formatConfig.filename, ofType: nil)!
-        
         // check clang-format config file.
-        let usedFormatConfigFile = "\(currentDirectory)/\(FormatConfig().filenameDefault)"
-        let copyFormatConfigFile = "\(currentDirectory)/\(FormatConfig().filename)"
+        let usedFormatConfigFile = "\(currentDirectory)/\(formatConfig.filenameDefault)"
+        let copyFormatConfigFile = "\(currentDirectory)/\(formatConfig.filename)"
 
         if fileManager.fileExists(atPath: plOriginFormatFile),
             let originConfigData = fileManager.contents(atPath: plOriginFormatFile),
@@ -122,5 +123,5 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
         return true
     }
-    
+
 }
