@@ -64,6 +64,17 @@ Change options of the `_clang-format-objc` file.
 
 [See ClangFormat-Option][2]
 
+### Update Your config file.
+
+
+1. Move to `[YourConfigFile direction]`
+
+2. Copy the config file to the app:
+
+```shell
+cp ./_clang-format-objc /Applications/ClangFormatter.app/Contents/PlugIns/ClangFormat.appex/Contents/Resources/_clang-format-objc
+```
+
 
 TODO List
 ---------
@@ -86,7 +97,8 @@ Reference
 
 License
 -------
-MIT.
+
+__MIT__
 
 [1]:https://clang.llvm.org/docs/ClangFormat.html
 [2]:https://clang.llvm.org/docs/ClangFormatStyleOptions.html
