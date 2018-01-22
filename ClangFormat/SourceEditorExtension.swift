@@ -15,7 +15,6 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     func extensionDidFinishLaunching() {
     }
     */
-
     
     /*
     var commandDefinitions: [[XCSourceEditorCommandDefinitionKey: AnyObject]] {

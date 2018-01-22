@@ -39,19 +39,7 @@ extension StringProxy {
     var md5: String {
         if let data = base.data(using: .utf8, allowLossyConversion: true) {
 
-            let message = data.withUnsafeBytes { bytes -> [UInt8] in
-                return Array(UnsafeBufferPointer(start: bytes, count: data.count))
-            }
-
-            let MD5Calculator = MD5(message)
-            let MD5Data = MD5Calculator.calculate()
-
-            var MD5String = String()
-            for c in MD5Data {
-                MD5String += String(format: "%02x", c)
-            }
-            return MD5String
-
+            return data.md5()!
         } else {
             return base
         }
@@ -86,6 +74,29 @@ extension Int {
         return arrayOfBytes(self, length: totalBytes)
     }
     
+}
+
+extension Data {
+    
+    func md5() -> String? {
+        guard self.count > 0 else {
+            
+            return nil
+        }
+        
+        let message = self.withUnsafeBytes { bytes -> [UInt8] in
+            return Array(UnsafeBufferPointer(start: bytes, count: self.count))
+        }
+        
+        let MD5Calculator = MD5(message)
+        let MD5Data = MD5Calculator.calculate()
+        
+        var MD5String = String()
+        for c in MD5Data {
+            MD5String += String(format: "%02x", c)
+        }
+        return MD5String
+    }
 }
 
 extension NSMutableData {

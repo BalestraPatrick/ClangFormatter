@@ -84,12 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		490F267F2007890300F260F4 /* style */ = {
+		490F267F2007890300F260F4 /* style-config */ = {
 			isa = PBXGroup;
 			children = (
 				490F268020078A4600F260F4 /* _clang-format-objc */,
 			);
-			path = style;
+			path = "style-config";
+			sourceTree = "<group>";
+		};
+		49B2E5472015D3C200ECE54E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				49A486262004C24400B4758A /* Files.swift */,
+				4971349220120C3100D3CD91 /* String+MD5.swift */,
+				4909568120118CA600A2FB3D /* FormatConfig.swift */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		A1417CA31D19E831005DEFA3 = {
@@ -142,12 +152,10 @@
 		A1417CC51D19EB7D005DEFA3 /* ClangFormat */ = {
 			isa = PBXGroup;
 			children = (
-				490F267F2007890300F260F4 /* style */,
-				49A486262004C24400B4758A /* Files.swift */,
+				490F267F2007890300F260F4 /* style-config */,
+				49B2E5472015D3C200ECE54E /* lib */,
 				A1417CC81D19EB7D005DEFA3 /* SourceEditorExtension.swift */,
 				A1417CCA1D19EB7D005DEFA3 /* SourceEditorCommand.swift */,
-				4909568120118CA600A2FB3D /* FormatConfig.swift */,
-				4971349220120C3100D3CD91 /* String+MD5.swift */,
 				A1417CC61D19EB7D005DEFA3 /* Supporting Files */,
 			);
 			path = ClangFormat;
@@ -217,14 +225,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 29C5EDQ3MS;
 						DevelopmentTeamName = "Boris Bügling (Personal Team)";
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A1417CC01D19EB7D005DEFA3 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 29C5EDQ3MS;
 						DevelopmentTeamName = "Boris Bügling (Personal Team)";
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -439,7 +447,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -457,7 +466,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.iosteampw.ClangFormatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -481,7 +491,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -505,7 +516,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
