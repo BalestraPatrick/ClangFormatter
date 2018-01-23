@@ -34,9 +34,9 @@
 					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SourceEditorCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>org.vu0.ClangFormat.SourceEditorCommand</string>
+					<string>org.iosteampw.ClangFormat.SourceEditorCommand</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Format</string>
+					<string>ObjC-Format</string>
 				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
@@ -46,6 +46,6 @@
 		<string>com.apple.dt.Xcode.extension.source-editor</string>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016 🚀. All rights reserved.</string>
+	<string>Copyright © 2017 iOSDevTeam. All rights reserved.</string>
 </dict>
 </plist>
