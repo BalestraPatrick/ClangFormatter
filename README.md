@@ -20,7 +20,7 @@ Requirement
 Install
 -------
 
-1. Download `ClangFormatter.app` [here][3]
+1. Download `ClangFormatter.app`
 2. Copy and Open `ClangFormatter.app` to `/Applications` Folder.
 3. Run it then close it.
 
@@ -108,4 +108,4 @@ __MIT__
 
 [1]:https://clang.llvm.org/docs/ClangFormat.html
 [2]:https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-[3]:Package/ClangFormatter.app
+[3]:https://github.com/poplax/ClangFormatter/releases/download/v1.0.0/lastest-version.zip
