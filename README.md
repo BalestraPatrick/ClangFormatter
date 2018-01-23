@@ -13,8 +13,8 @@ You can create your own (or team) code style configuration.
 Requirement
 -----------
 
-- OS X 10.13.x
-- Xcode 9.x
+- OS X 10.12 or higher
+- Xcode 9.x+
 
 
 Install
@@ -67,12 +67,18 @@ Change options of the `_clang-format-objc` file.
 ### Update Your config file.
 
 
-1. Move to `[YourConfigFile direction]`
+__Step 1,2 is Optional__
 
-2. Copy the config file to the app:
++ First, Move to your config file(`_clang-format-objc`) Folder.
 
-```shell
-cp ./_clang-format-objc /Applications/ClangFormatter.app/Contents/PlugIns/ClangFormat.appex/Contents/Resources/_clang-format-objc
+_In Project:_
+
+`cd ClangFormat/style-config/`
+    
++ Copy the config file to the format app.
+
+```bash
+cp -f ./_clang-format-objc /Applications/ClangFormatter.app/Contents/PlugIns/ClangFormat.appex/Contents/Resources/_clang-format-objc
 ```
 
 
